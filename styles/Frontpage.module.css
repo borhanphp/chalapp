@@ -71,14 +71,11 @@
 }
 
   .borderst{
-      border: 1px solid rgb(219, 214, 214);
-      border-top: none;
-      padding: 15px;
-      font-weight: bold;
-      font-size: 20px;
+      width: 100%;
+    border: 1px solid rgb(214, 211, 211);
   }
   .borderimg {
-    padding: 0;
+    padding: 0px;
   }
 
   .specialsec{

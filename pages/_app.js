@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import App from 'next/app'
+import { useEffect } from 'react'
 import Script from 'next/script'
 // import Layout from '../components/Layout'
 import Topnav from '../components/frontend/Topnav'
@@ -16,6 +17,7 @@ import '../styles/globals.css'
 
 class MyApp extends App {
     render() {
+
       const { Component, pageProps, router } = this.props
   
       if (router.pathname.startsWith(['/admin'])) {

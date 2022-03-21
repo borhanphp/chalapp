@@ -59,8 +59,8 @@ const Topnav = () => {
                 </Dateset>
                       
                 <Topmid>
-                    <Link href="/about">আমাদের সম্পর্কে</Link>&nbsp;&nbsp;&nbsp;
-                    <Link href="/contact">যোগাযোগ</Link>
+                    <Link href="/site-pages/about">আমাদের সম্পর্কে</Link>&nbsp;&nbsp;&nbsp;
+                    <Link href="/site-pages/contact">যোগাযোগ</Link>
                 </Topmid>
 
                 <Socialmini>

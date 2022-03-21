@@ -13,6 +13,14 @@ import Card from '../components/blog/Card';
 import { API, DOMAIN, APP_NAME, FB_APP_ID } from '../config';
 import Layout2 from '../components/Layout2';
 import firstsection from './firstsection';
+import Scrollbar from '../components/frontend/Scrollbar';
+
+
+
+const Wrapper = styled.div`
+      align: center;
+
+`;
 
 
 
@@ -28,7 +36,7 @@ const Blogs = ({ sports, technology, education, health, lifestyle, artlit, relig
             content="Daily newyork news news"
         />
         <link rel="canonical" href={`${DOMAIN}${router.pathname}`} />
-        <meta property="og:title" content={`Latest web developoment tutorials | ${APP_NAME}`} />
+        <meta property="og:title" content={`Latest newyork news for | ${APP_NAME}`} />
         <meta
             property="og:description"
             content="Newyork News"
@@ -45,7 +53,7 @@ const Blogs = ({ sports, technology, education, health, lifestyle, artlit, relig
 );
 
 
-
+    
 // const [limit, setLimit] = useState(blogsLimit);
 // const [skip, setSkip] = useState(0);
 // const [size, setSize] = useState(totalBlogs);
@@ -112,24 +120,23 @@ const Blogs = ({ sports, technology, education, health, lifestyle, artlit, relig
 // };
 
 
-
 const showAllBlogs = () => {
   return blogs?.map((blog, i) => {
       // ()
       return (
           <article key={i}>
               <Frontpage blog={blog} />
-              {/* <FirstSection blog={blog} /> */}
           </article>
       );
   });
 };
 
-
+<Scrollbar last={last} />
 
   return (
     
     <>
+    <Wrapper>
     {head()}
    
     
@@ -144,17 +151,17 @@ const showAllBlogs = () => {
           {/* <div className="text-center pt-5 pb-5">{loadMoreButton()}</div> */}
 
 
-          <div className='container-fluid px-0'>
-          <div className='row d-flex justify-content-evenly'>
+          <div className='container-fluid'>
+          <div className='row'>
             <div className='col-md-4 row'>
               <div className='col-12'>
                 
-                <img src='img1.jpg' className='w-100 mt-3' />
+                <img src='img1.jpg' className='w-100' />
               </div>
               <div className='col-12'>
                 <Link href={`/blogs/${last[0].slug}`}>
                     <a className='text-start'>
-                        <h2 className="pt-3 pb-3 font-weight-bold">{last[0].title}</h2>
+                        <h2 className="font-weight-bold">{last[0].title}</h2>
                     </a>
                 </Link>
               </div>
@@ -166,12 +173,12 @@ const showAllBlogs = () => {
 
             <div className='col-md-4 row'>
               <div className='col-12'>
-              <img src='img1.jpg' className='w-100 my-3' />
+              <img src='img1.jpg' className='w-100' />
               </div>
               <div className='col-12 mb-2'>
               <Link href={`/blogs/${last[1].slug}`}>
                     <a className='text-start'>
-                        <h2 className="pt-3 pb-3 font-weight-bold">{last[1].title}</h2>
+                        <h2 className="font-weight-bold">{last[1].title}</h2>
                     </a>
                 </Link>
               </div>
@@ -182,12 +189,12 @@ const showAllBlogs = () => {
 
             <div className='col-md-4 row'>
               <div className='col-12'>
-                <img src='img1.jpg' className='w-100 my-3' />
+                <img src='img1.jpg' className='w-100' />
               </div>
               <div className='col-12 mb-2'>
               <Link href={`/blogs/${last[2].slug}`}>
                     <a className='text-start'>
-                        <h2 className="pt-3 pb-3 font-weight-bold">{last[2].title}</h2>
+                        <h2 className="font-weight-bold">{last[2].title}</h2>
                     </a>
                 </Link>
               </div>
@@ -204,7 +211,7 @@ const showAllBlogs = () => {
            
            
            {/* america section start here */}
-          <div className='row d-flex justify-content-evenly'>
+          <div className='row'>
             <div className='col-md-12'>
               <Link href="/categories/america">
               <a>
@@ -217,7 +224,7 @@ const showAllBlogs = () => {
             </div>
           </div>
 
-          <div className='row d-flex justify-content-evenly'>
+          <div className='row'>
             <div className='col-md-3 row'>
               <div className='col-12'>
                 <img src='img1.jpg' className='w-100 my-3' />
@@ -225,7 +232,7 @@ const showAllBlogs = () => {
               <div className='col-12'>
               <Link href={`/blogs/${america[0].slug}`}>
                     <a className='text-start'>
-                        <h2 className="pt-3 pb-3 font-weight-bold">{america[0].title}</h2>
+                        <h4 className="font-weight-bold">{america[0].title}</h4>
                     </a>
                 </Link>
               </div>
@@ -244,7 +251,7 @@ const showAllBlogs = () => {
               <div className='col-12'>
               <Link href={`/blogs/${america[1].slug}`}>
                     <a className='text-start'>
-                        <h2 className="pt-3 pb-3 font-weight-bold">{america[1].title}</h2>
+                        <h4 className="font-weight-bold">{america[1].title}</h4>
                     </a>
                 </Link>
               </div>
@@ -261,7 +268,7 @@ const showAllBlogs = () => {
               <div className='col-12'>
               <Link href={`/blogs/${america[2].slug}`}>
                     <a className='text-start'>
-                        <h2 className="pt-3 pb-3 font-weight-bold">{america[2].title}</h2>
+                        <h4 className="font-weight-bold">{america[2].title}</h4>
                     </a>
                 </Link>
               </div>
@@ -279,7 +286,7 @@ const showAllBlogs = () => {
               <div className='col-12'>
               <Link href={`/blogs/${america[3].slug}`}>
                     <a className='text-start'>
-                        <h2 className="pt-3 pb-3 font-weight-bold">{america[3].title}</h2>
+                        <h4 className="font-weight-bold">{america[3].title}</h4>
                     </a>
                 </Link>
               </div>
@@ -297,7 +304,7 @@ const showAllBlogs = () => {
               <div className='col-12'>
               <Link href={`/blogs/${america[4].slug}`}>
                     <a className='text-start'>
-                        <h2 className="pt-3 pb-3 font-weight-bold">{america[4].title}</h2>
+                        <h4 className="font-weight-bold">{america[4].title}</h4>
                     </a>
                 </Link>
               </div>
@@ -314,7 +321,7 @@ const showAllBlogs = () => {
               <div className='col-12'>
               <Link href={`/blogs/${america[5].slug}`}>
                     <a className='text-start'>
-                        <h2 className="pt-3 pb-3 font-weight-bold">{america[5].title}</h2>
+                        <h4 className="font-weight-bold">{america[5].title}</h4>
                     </a>
                 </Link>
               </div>
@@ -332,7 +339,7 @@ const showAllBlogs = () => {
               <div className='col-12'>
               <Link href={`/blogs/${america[6].slug}`}>
                     <a className='text-start'>
-                        <h2 className="pt-3 pb-3 font-weight-bold">{america[6].title}</h2>
+                        <h4 className="font-weight-bold">{america[6].title}</h4>
                     </a>
                 </Link>
               </div>
@@ -349,7 +356,7 @@ const showAllBlogs = () => {
               <div className='col-12'>
               <Link href={`/blogs/${america[7].slug}`}>
                     <a className='text-start'>
-                        <h2 className="pt-3 pb-3 font-weight-bold">{america[7].title}</h2>
+                        <h4 className="font-weight-bold">{america[7].title}</h4>
                     </a>
                 </Link>
               </div>
@@ -370,8 +377,8 @@ const showAllBlogs = () => {
             </div>
           </div>
 
-          <div className='row d-flex justify-content-evenly'>
-            <div className='col-md-3 row p-4'>
+          <div className='row'>
+            <div className='col-md-3 row'>
               <img src='img1.jpg' className={styles.borderimg} />
               <Link href={`/blogs/${muktomot[0].slug}`}>
                 <a>
@@ -381,7 +388,7 @@ const showAllBlogs = () => {
             </div>
 
 
-            <div className='col-md-3 row p-3'>
+            <div className='col-md-3 row'>
               <img src='img1.jpg' className={styles.borderimg} />
               <Link href={`/blogs/${muktomot[1].slug}`}>
                 <a>
@@ -391,7 +398,16 @@ const showAllBlogs = () => {
             </div>
 
 
-            <div className='col-md-3 row p-3'>
+            {/* <div className='col-md-3 row'>
+              <img src='img1.jpg' className={styles.borderimg} />
+              <Link href={`/blogs/${muktomot[2].slug}`}>
+                <a>
+                  <h4 className={styles.borderst}>{muktomot[2].title}</h4>
+                </a>
+              </Link>
+            </div> */}
+
+            <div className='col-md-3 row'>
               <img src='img1.jpg' className={styles.borderimg} />
               <Link href={`/blogs/${muktomot[2].slug}`}>
                 <a>
@@ -401,7 +417,7 @@ const showAllBlogs = () => {
             </div>
 
 
-            <div className='col-md-3 row p-3'>
+            <div className='col-md-3 row'>
               <img src='img1.jpg' className={styles.borderimg} />
               <Link href={`/blogs/${muktomot[3].slug}`}>
                 <a>
@@ -422,7 +438,7 @@ const showAllBlogs = () => {
             </div>
           </div>
 
-          <div className='row d-flex justify-content-evenly'>
+          <div className='row'>
             <div className='col-md-3 row '>
               <div className={styles.specialsec}>
                 <img src='img1.jpg' className='w-100 h-100' />
@@ -477,7 +493,7 @@ const showAllBlogs = () => {
             </div>
           </div>
 
-            <div className='row d-flex justify-content-evenly'>
+            <div className='row'>
               <div className='col-md-8 row mt-2'>
                 <div className='col-4'>
                   <div className={styles.banglasec}>
@@ -591,7 +607,7 @@ const showAllBlogs = () => {
 
             {/*************************** * politics section start here *************************/}
 
-            <div className='row d-flex justify-content-around'>
+            <div className='row'>
               <div className='col-md-4 row'>
                 
                 <div className='row mt-4'>
@@ -823,7 +839,7 @@ const showAllBlogs = () => {
 
         {/* middle advertisement start here */}
         
-            <div className='row mt-2 d-flex justify-content-center p-2'>
+            <div className='row mt-2 p-2'>
               <div className='col-12 mb-2'>
                 <img src='banner-2.jpg' className='w-100' style={{height: '100px'}}/>
               </div>
@@ -839,7 +855,7 @@ const showAllBlogs = () => {
             {/**************************** * projukti start here ***********************************/}
 
 
-            <div className='row d-flex justify-content-evenly'>
+            <div className='row'>
             <div className='col-md-3 row'>
                 
                 <div className='row mt-4'>
@@ -1439,7 +1455,7 @@ const showAllBlogs = () => {
 
                 
 
-            <div className='row d-flex justify-content-evenly'>
+            <div className='row'>
             
               <div className='col-md-8 row'>
                 <div className='row mt-4'>
@@ -1782,7 +1798,7 @@ const showAllBlogs = () => {
           
           
         
-      
+          </Wrapper>
     </>
   )
 

@@ -10,25 +10,26 @@ const Footer = () => {
             <div className='row text-center'>
                 <div className='col-lg-12 mt-5'>
                     
-                        <Link href='/about'>
+                        <Link href='/site-pages/about'>
                             <a>
                                 &nbsp;&nbsp;<button className='btn rounded-pill btn-info'>About us</button>
                             </a>
                         </Link>
-                    
-                        <Link href='/about'>
-                            <a>
-                                &nbsp;&nbsp;<button className='btn rounded-pill btn-info'>Advertisement</button>
-                            </a>
-                        </Link>
-                    
-                        <Link href='/about'>
+
+                        <Link href='/site-pages/contact'>
                             <a>
                                 &nbsp;&nbsp;<button className='btn rounded-pill btn-info'>Contact us</button>
                             </a>
                         </Link>
                     
-                        <Link href='/about'>
+                        <Link href='/site-pages/advertisement'>
+                            <a>
+                                &nbsp;&nbsp;<button className='btn rounded-pill btn-info'>Advertisement</button>
+                            </a>
+                        </Link>
+                        
+                    
+                        <Link href='/site-pages/editor'>
                             <a>
                                 &nbsp;&nbsp;<button className='btn rounded-pill btn-info'>Editor</button>
                             </a>

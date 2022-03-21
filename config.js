@@ -3,6 +3,7 @@ const {publicRuntimeConfig} = getConfig()
 
 export const API = 'https://chalaman2.herokuapp.com/api';
 export const APP_NAME = publicRuntimeConfig.APP_NAME;
+export const DOMAIN = "chalnews.herokuapp.com";
 
 
 
