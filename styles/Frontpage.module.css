@@ -1,10 +1,9 @@
+
 .hr {
     background:rgb(80, 143, 236);
     position:relative;
     height:6px;
     margin-top: -10px;
-    margin-right: 19px;
-    margin-left: 19px;
 }
 
 .hr:before {
@@ -59,8 +58,6 @@
   .america {
       font-weight: 900;
       font-size: x-large;
-      margin-left: 19px;
-      cursor: pointer;
 
   }
 
@@ -72,10 +69,12 @@
 
   .borderst{
       width: 100%;
-    border: 1px solid rgb(214, 211, 211);
+      padding: 1%;
+      border: 1px solid rgb(214, 211, 211);
   }
   .borderimg {
     padding: 0px;
+    width: 100%;
   }
 
   .specialsec{
@@ -88,8 +87,7 @@
   .bottomleft{
     position: absolute;
     bottom: -5px;
-    left: 18px;
-    margin-right: 12px;
+    left: 3%;
     font-weight: bold;
     font-size: 20px;
     background-color: rgba(32, 30, 30, 0.562);
@@ -103,7 +101,6 @@
 
 
   .banglasec {
-    width: 100%;
     border: 1px solid rgb(214, 211, 211);
   }
 
@@ -154,5 +151,63 @@
     bottom: 1rem;
     align-self: flex-end;
   }
+
+  .first-bold-img{
+    height: 300px;
+  }
+  
+  .mobile_logo_img{
+    width: 200px;
+    height:auto ;
+    cursor: pointer;
+  }
+
+
+  .main_menu_show{
+    display: none;
+  }
+
+  @media (min-width: 800px) {
+    .main_menu_show{
+      display: block;
+    }
+  }
+
+  .mobile_menu_show{
+    display: none;
+  }
+
+
+  @media (max-width: 800px) {
+    .mobile_menu_show{
+      display: block;
+    }
+  }
+
+  .content_justify{
+    text-align: justify;
+  }
+
+  .simple_heading {
+    font-weight: 600;
+    font-size: 25px;
+  }
+
+  .fixedadds {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+  }
+
+
+  /* mobile search button style */
+
+  .searchbutton {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+  }
+  
+ 
 
   

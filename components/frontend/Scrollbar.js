@@ -6,10 +6,6 @@ import SquareIcon from '@mui/icons-material/Square';
 
 
 
-const Wrapper = styled.div`
-    // margin-left: 40px;
-    // margin-right: 40px;
-`;
 
 
 const Scrollbar = () => {
@@ -31,10 +27,10 @@ const Scrollbar = () => {
 
   return (
       <>
-        <Wrapper>
+       <div className='container-fluid'>
             <div className="row">
                 <div className="col-1 bg-dark">
-                    <h6 className="text-white fw-bold pt-2 float-end">শিরোনাম</h6>
+                    <h6 className="text-white fw-bold pt-2">শিরোনাম</h6>
                 </div>
 
                 <div className="col-11 bg-danger">
@@ -48,7 +44,11 @@ const Scrollbar = () => {
                     </marquee>
                 </div>
             </div>
-        </Wrapper>
+            </div>
+
+
+
+        
       </>
   );
 };

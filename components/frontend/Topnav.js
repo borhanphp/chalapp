@@ -1,5 +1,8 @@
 import Link from "next/link";
 import styled from "styled-components";
+import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import YouTubeIcon from '@mui/icons-material/YouTube';
 
 
 const Wrapper = styled.div`
@@ -64,9 +67,9 @@ const Topnav = () => {
                 </Topmid>
 
                 <Socialmini>
-                    <Link href="https://facebook.com"><i class="fab fa-facebook"></i></Link>&nbsp;&nbsp;&nbsp;
-                    <Link href="/about"><i class="fab fa-twitter"></i></Link>&nbsp;&nbsp;&nbsp;
-                    <Link href="/about"><i class="fab fa-1x fa-youtube"></i></Link>
+                    <Link href="https://facebook.com"><a><FacebookRoundedIcon/></a></Link>&nbsp;&nbsp;&nbsp;
+                    <Link href="https://twitter.com"><a><TwitterIcon/></a></Link>&nbsp;&nbsp;&nbsp;
+                    <Link href="https://youtube.com"><a><YouTubeIcon/></a></Link>
                 </Socialmini>
                
         </Wrapper>

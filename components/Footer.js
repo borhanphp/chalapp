@@ -6,7 +6,7 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 const Footer = () => {
   return (
       <>
-        <div className='container-fluid bg-light' style={{height: '300px'}}>
+        <div className='container-fluid bg-light' style={{height: '300px', position: 'relative', minHeight: '300px'}}>
             <div className='row text-center'>
                 <div className='col-lg-12 mt-5'>
                     

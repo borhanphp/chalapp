@@ -47,13 +47,13 @@ const BlogRead = ({ username }) => {
         if (isAuth() && isAuth().role === 0) {
             return (
                 <Link href={`/user/crud/${blog.slug}`}>
-                    <a className="ml-2 btn btn-sm btn-warning">Update</a>
+                     <a href="#" class="btn btn-icon demo-pli-pen-5 icon-lg add-tooltip" data-original-title="Edit Post" data-container="body"></a>
                 </Link>
             );
         } else if (isAuth() && isAuth().role === 1) {
             return (
                 <Link href={`/admin/crud/${blog.slug}`}>
-                    <a className="ml-2 btn btn-sm btn-warning">Update</a>
+                     <a href="#" class="btn btn-icon demo-pli-pen-5 icon-lg add-tooltip" data-original-title="Edit Post" data-container="body"></a>
                 </Link>
             );
         }
@@ -62,22 +62,59 @@ const BlogRead = ({ username }) => {
     const showAllBlogs = () => {
         return blogs?.map((blog, i) => {
             return (
-                <div key={i} className="pb-5">
-                    <h3>{blog.title}</h3>
+                <>
+					        
+               
+                    {/* <h3>{blog.title}</h3>
                     <p className="mark">
                         Written by {blog.postedBy.name} | Published on {moment(blog.updatedAt).fromNow()}
                     </p>
                     <button className="btn btn-sm btn-danger" onClick={() => deleteConfirm(blog.slug)}>
                         Delete
                     </button>
-                    {showUpdateButton(blog)}
-                </div>
+                    {showUpdateButton(blog)} */}
+                        
+
+                                                <tr key={i}>
+					                            <td><img class="img-responsive img-sm" src="img\thumbs\img-1.jpeg" alt="thumbs"/></td>
+					                            <td><a class="btn-link" href="#">{blog.title}</a></td>
+					                            <td><span class="text-muted">{moment(blog.updatedAt).fromNow()}</span></td>
+					                            <td>{blog.categories.name}</td>
+					                            <td><a href="#" class="btn-link">{blog.postedBy.name}</a></td>
+					                            <td>
+					                                <div class="label label-table label-success">Published</div>
+					                            </td>
+					                            <td class="min-width">
+					                                <div class="btn-groups">
+					                                    {/* <a href="#" class="btn btn-icon demo-pli-gear icon-lg add-tooltip" data-original-title="Settings" data-container="body"></a>
+					                                    <a href="#" class="btn btn-icon demo-pli-file-text-image icon-lg add-tooltip" data-original-title="View post" data-container="body"></a>
+                                                        */}
+                                                        {showUpdateButton(blog)}
+					                                    <button href="#" onClick={() => deleteConfirm(blog.slug)} class="btn btn-icon demo-pli-trash icon-lg add-tooltip" data-original-title="Remove" data-container="body"></button>
+					                                </div>
+					                            </td>
+					                            </tr>
+                        </>
+
+
+                    
+					                      
+					                       
+					               
+					
+
+                           
+                
             );
         });
     };
 
+
+    
+
     return (
         <>
+        
         <div className='container-fluid'>
                 <div className='row'>
                     <div className='col-2'>
@@ -91,8 +128,54 @@ const BlogRead = ({ username }) => {
                         </div>
                         <div className="col-md-12">
                             {message && <div className="alert alert-warning">{message}</div>}
-                            {showAllBlogs()}
+                           
+                            <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-vcenter">
+                                    <thead>
+                                        <tr>
+                                            <th>Image</th>
+                                            <th>Post Title</th>
+                                            <th>Creation Date</th>
+                                            <th>Categories</th>
+                                            <th>Post by</th>
+                                            <th>Status</th>
+                                            <th class="text-center">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                           
+                                        {showAllBlogs()}
+
+                                    
+					                    </tbody>
+					                </table>
+					            </div>
+
+                                <div class="row">
+					                <div class="col-sm-5">
+					                    <div>Showing 1 to 10 of 57 entries</div>
+					                </div>
+					                <div class="col-sm-7 text-right">
+					                    <ul class="pagination">
+					                        <li class="disabled"><a href="#" class="demo-pli-arrow-left">Previous</a></li>
+					                        <li class="active"><a href="#">1</a></li>
+					                        <li><a href="#">2</a></li>
+					                        <li><a href="#">3</a></li>
+					                        <li><a href="#">4</a></li>
+					                        <li><span>...</span></li>
+					                        <li><a href="#">20</a></li>
+					                        <li><a href="#" class="demo-pli-arrow-right">Next</a></li>
+					                    </ul>
+					                </div>
+					            </div>
+					        </div>
+					       
+                            
                         </div>
+
+
+                        
                     </div>
                  
                 </div>

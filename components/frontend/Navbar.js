@@ -19,6 +19,7 @@ const Navbar = () => {
     //         </Link>
     //     ));
   return (
+      <>
       <Wrapper>
       <nav className={styles.nav}>
       
@@ -56,11 +57,16 @@ const Navbar = () => {
                 </div>
             
                 <div>
-                    <button className={styles.button2}>English Version</button>
+                   
+                        <button className={styles.button2}>English Version</button>
+                    
                 </div>
             </span>
       </nav>
       </Wrapper>
+
+    
+      </>
   );
 };
 
