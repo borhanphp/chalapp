@@ -22,8 +22,10 @@ const Nheading = styled.p`
 
 
 
-
 const Frontpage = () => {
+
+
+  
 
 
   const [america, setAmerica] = useState([]);
@@ -203,7 +205,7 @@ const Frontpage = () => {
 
           <div className='row mt-3'>
 
-            <div className='col-3 text-center'>
+            <div className='col-lg-3 col-6 text-center'>
               <img src='img1.jpg' className='w-100' />
               <Link href={`/blogs/${america[0]?.slug}`}>
               <a className='text-start'>
@@ -216,7 +218,7 @@ const Frontpage = () => {
             </div>
 
 
-            <div className='col-3 text-center'>
+            <div className='col-lg-3 col-6 text-center'>
               <img src='img1.jpg' className='w-100' />
               <Link href={`/blogs/${america[1]?.slug}`}>
               <a className='text-start'>
@@ -229,7 +231,7 @@ const Frontpage = () => {
             </div>
 
 
-            <div className='col-3 text-center'>
+            <div className='col-lg-3 col-6 text-center'>
               <img src='img1.jpg' className='w-100' />
               <Link href={`/blogs/${america[2]?.slug}`}>
               <a className='text-start'>
@@ -242,7 +244,7 @@ const Frontpage = () => {
             </div>
 
 
-            <div className='col-3 text-center'>
+            <div className='col-lg-3 col-6 text-center'>
               <img src='img1.jpg' className='w-100' />
               <Link href={`/blogs/${america[3]?.slug}`}>
               <a className='text-start'>
@@ -254,7 +256,7 @@ const Frontpage = () => {
               <p className={styles.content_justify}>{america[3]?.excerpt}</p>
             </div>
 
-            <div className='col-3 text-center'>
+            <div className='col-lg-3 col-6 text-center'>
               <img src='img1.jpg' className='w-100' />
               <Link href={`/blogs/${america[4]?.slug}`}>
               <a className='text-start'>
@@ -266,7 +268,7 @@ const Frontpage = () => {
               <p className={styles.content_justify}>{america[4]?.excerpt}</p>
             </div>
 
-            <div className='col-3 text-center'>
+            <div className='col-lg-3 col-6 text-center'>
               <img src='img1.jpg' className='w-100' />
               <Link href={`/blogs/${america[5]?.slug}`}>
               <a className='text-start'>
@@ -278,7 +280,7 @@ const Frontpage = () => {
               <p className={styles.content_justify}>{america[5]?.excerpt}</p>
             </div>
 
-            <div className='col-3 text-center'>
+            <div className='col-lg-3 col-6 text-center'>
               <img src='img1.jpg' className='w-100' />
               <Link href={`/blogs/${america[6]?.slug}`}>
               <a className='text-start'>
@@ -290,7 +292,7 @@ const Frontpage = () => {
               <p className={styles.content_justify}>{america[6]?.excerpt}</p>
             </div>
 
-            <div className='col-3 text-center'>
+            <div className='col-lg-3 col-6 text-center'>
               <img src='img1.jpg' className='w-100' />
               <Link href={`/blogs/${america[7]?.slug}`}>
               <a className='text-start'>
@@ -856,7 +858,7 @@ const Frontpage = () => {
                     <div className='col-md-12 row mt-3'>
                         <span className={styles.minithumb}></span>
                           <div className='col-2'>
-                          <i class="fas fs-2 fa-share mt-2 text-muted p-2"></i>
+                         
                           </div>
                         <div className='col-10'>
                         <p className=''>
