@@ -6,7 +6,7 @@ export const APP_NAME = publicRuntimeConfig.APP_NAME;
 export const DOMAIN = "chalnews.herokuapp.com";
 
 
-
+export const FB_APP_ID = publicRuntimeConfig.FB_APP_ID;
 // publicRuntimeConfig.PRODUCTION 
 // ? publicRuntimeConfig.API_PRODUCTION 
 // : publicRuntimeConfig.API_DEVELOPMENT;
