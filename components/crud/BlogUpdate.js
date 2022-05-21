@@ -222,7 +222,7 @@ const BlogUpdate = ({ router }) => {
         return (
             <form onSubmit={editBlog}>
                 <div className="form-group">
-                    <label className="text-muted">Title</label>
+                    <label className="text-muted"><h4>Title</h4></label>
                     <input type="text" className="form-control" value={title} onChange={handleChange('title')} />
                 </div>
 
@@ -233,11 +233,11 @@ const BlogUpdate = ({ router }) => {
                         value={body}
                         placeholder="Write something amazing..."
                         onChange={handleBody}
-                        style={{height: '300px'}}
+                        style={{height: '500px'}}
                     />
                 </div>
 
-                <div>
+                <div style={{marginTop: "60px"}}>
                     
                     <button type="submit" className="btn btn-primary mt-5">
                         Update
@@ -249,7 +249,7 @@ const BlogUpdate = ({ router }) => {
     };
 
     return (
-        <div className="container-fluid pb-5">
+        <div className="container-fluid" style={{marginTop: "40px"}}>
             <div className="row">
                 <div className="col-md-8">
                     {updateBlogForm()}
@@ -258,10 +258,6 @@ const BlogUpdate = ({ router }) => {
                         {showSuccess()}
                         {showError()}
                     </div>
-
-                    {body && (
-                        <img src={`${API}/blog/photo/${router.query.slug}`} alt={title} style={{ width: '100%' }} />
-                    )}
                 </div>
 
                 <div className="col-md-4">
@@ -269,11 +265,13 @@ const BlogUpdate = ({ router }) => {
                         <div className="form-group pb-2">
                             <h5>Featured image</h5>
                             <hr />
-
+                            {body && (
+                        <img src={`${API}/blog/photo/${router.query.slug}`} alt={title} style={{ width: '100%' }} />
+                    )}
                             <small className="text-muted">Max size: 1mb</small>
                             <br />
                             <label className="btn btn-outline-info">
-                                Upload featured image
+                                Update featured image
                                 <input onChange={handleChange('photo')} type="file" accept="image/*" hidden />
                             </label>
                         </div>

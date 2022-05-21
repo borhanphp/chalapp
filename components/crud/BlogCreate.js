@@ -397,44 +397,8 @@ const CreateBlog = ({ router }) => {
                         <ul style={{ maxHeight: '200px', overflowY: 'scroll' }}>{showTags()}</ul>
                     </div>
                   <hr />
-                  <p className="text-main text-sm text-uppercase text-bold">
-                    Public Settings
-                  </p>
-                  <div className="form-horizontal">
-                    <div className="form-group">
-                      <label
-                        className="col-sm-5 control-label text-left"
-                        htmlFor="demo-hor-inputpass"
-                      >
-                        Allow comments
-                      </label>
-                      <div className="col-sm-7">
-                        <input
-                          className="toggle-switch"
-                          id="demo-allow-comments"
-                          type="checkbox"
-                          defaultChecked=""
-                        />
-                        <label htmlFor="demo-allow-comments" />
-                      </div>
-                    </div>
-                    <div className="form-group">
-                      <label
-                        className="col-sm-5 control-label text-left"
-                        htmlFor="demo-hor-inputpass"
-                      >
-                        Allow trackbacks
-                      </label>
-                      <div className="col-sm-7">
-                        <input
-                          className="toggle-switch"
-                          id="demo-allow-tbpb"
-                          type="checkbox"
-                        />
-                        <label htmlFor="demo-allow-tbpb" />
-                      </div>
-                    </div>
-                  </div>
+                  
+                  
                 </div>
               </div>
             </div>
