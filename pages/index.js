@@ -290,6 +290,8 @@ const Blogs = ({ sports, technology, education, health, lifestyle, artlit, relig
             <div className='col-md-3'>
               <div className={styles.specialsec}>
                 {/* <img src='img1.jpg' className='w-100 h-100' /> */}
+                {/* <img src='img1.jpg' className='w-100 h-100' /> */}
+                
                 <img src={`${API}/blog/photo/${special[0]?.slug}`} className='w-100 h-100'/>
                 <h4 className={styles.bottomleft}>
                   <Link href={`/blogs/${special[0]?.slug}`}>

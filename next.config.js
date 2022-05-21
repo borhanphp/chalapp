@@ -6,6 +6,6 @@ module.exports = {
     API_PRODUCTION: 'https://chnews-api.herokuapp.com/api',
     API_DEVELOPMENT: 'http://localhost:8000/api',
     PRODUCTION: true,
-    FB_APP_ID: "facebook.com"
+    FB_APP_ID: ""
   }
 };
