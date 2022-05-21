@@ -7,7 +7,7 @@ import styled from 'styled-components';
 import styles from '../styles/Frontpage.module.css'
 import { withRouter } from 'next/router';
 import { API, DOMAIN, APP_NAME, FB_APP_ID } from '../config';
-import HomeRightAds from '../components/frontend/homeRightAds';
+import HomeRightAds from '../components/frontend/HomeRightAds';b
 import HomeLongAds from '../components/frontend/HomeLongAds';
 import HomeSmallFirstAds from '../components/frontend/HomeSmallFirstAds';
 import HomeSmallSecAds from '../components/frontend/HomeSmallSecAds';
