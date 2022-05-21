@@ -200,7 +200,7 @@ const Blogs = ({ sports, technology, education, health, lifestyle, artlit, relig
               </Link>
               <p className={styles.content_justify}>{renderHTML(america[6]?.excerpt)}</p>
             </div>
-{/* this is a comment */}
+
             <div className='col-lg-3 col-6 text-center'>
               {/* <img src='img1.jpg' className='w-100' /> */}
               <img src={`${API}/blog/photo/${america[7]?.slug}`} style={{width: "100%", height: "180px"}}/>
