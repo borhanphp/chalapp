@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { API } from '../config';
-import HomeRightAds from './frontend/homeRightAds';
+import HomeRightAds from './frontend/HomeRightAds';
 
 const Postsidebar = () => {
 
