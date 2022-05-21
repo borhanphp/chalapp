@@ -143,7 +143,7 @@ const Blogs = ({ sports, technology, education, health, lifestyle, artlit, relig
             <div className='col-md-4 row'>
               <div className='col-12'>
                 
-                <img src='img1.jpg' className='w-100' />
+              <img src={`${API}/blog/photo/${last[0]?.slug}`} style={{ width: '100%' }} />
               </div>
               <div className='col-12'>
                 <Link href={`/blogs/${last[0].slug}`}>
@@ -733,9 +733,9 @@ const Blogs = ({ sports, technology, education, health, lifestyle, artlit, relig
                             <img src='img1.jpg' className='w-100'/>
                           </div>
                         <div className='col-8'>
-                        <Link href={`/blogs/${economy[3].slug}`}>
+                        <Link href={`/blogs/${economy[3]?.slug}`}>
                             <a>
-                              <p>{economy[3].title}</p>
+                              <p>{economy[3]?.title}</p>
                             </a>
                         </Link>
                         </div>

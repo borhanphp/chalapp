@@ -9,6 +9,10 @@ import renderHTML from 'react-render-html';
 import moment from 'moment';
 import SmallCard from '../../components/blog/SmallCard';
 import Postsidebar from '../../components/Postsidebar';
+import BelowPostAds from '../../components/frontend/BelowPostAds';
+import axios from 'axios';
+import HomeSmallFirstAds from '../../components/frontend/HomeSmallFirstAds';
+import SingleSmallAds from '../../components/frontend/BelowPostAds';
 
 const SingleBlog = ({ blog, query }) => {
     const [related, setRelated] = useState([]);
@@ -71,7 +75,14 @@ const SingleBlog = ({ blog, query }) => {
         ));
     };
 
+    const [data, setData] = useState([]);
     
+    useEffect(() => {
+        axios.get(`${API}/below-post-ads`)
+        .then((res) => {setData(res.data)})
+        .catch((err) => {console.log(err)});
+    }, [])
+
 
     return (
         <React.Fragment>
@@ -108,6 +119,10 @@ const SingleBlog = ({ blog, query }) => {
                                                     src={`${API}/blog/photo/${blog.slug}`}
                                                     alt={blog.title}
                                                     className="img img-fluid featured-image"
+                                                    style={{
+                                                        height: "50%",
+                                                        width: "100%"
+                                                    }}
                                                 />
                                             </div>
                                         
@@ -116,14 +131,7 @@ const SingleBlog = ({ blog, query }) => {
                                             </div>
                                        
                                             <div className='col-lg-12'>
-                                                <Link href='#'>
-                                                    <a>
-                                                        <img 
-                                                            src='../banner-2.jpg' 
-                                                            className='w-100'b
-                                                        />
-                                                    </a>
-                                                </Link>
+                                            <SingleSmallAds/>
                                                 
                                             </div>
 
@@ -136,7 +144,7 @@ const SingleBlog = ({ blog, query }) => {
                                         </div>
 
                                         <div className='col-lg-4 text-start'>
-                                            <Postsidebar />
+                                       <Postsidebar/>
                                         </div>
                                     </div>
 

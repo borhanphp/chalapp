@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import Head from 'next/head';
 import { useState, useEffect } from 'react';
 import styles from '../../styles/Frontpage.module.css'
 import renderHTML from 'react-render-html';
@@ -23,8 +24,6 @@ const Nheading = styled.p`
 
 
 const Frontpage = () => {
-
-
   
 
 
@@ -154,9 +153,9 @@ const Frontpage = () => {
           <div className='row mt-3'>
             <div className='col-md-4 text-center'>
               <div className='col-md-12 col-sm-12'>
-                <img src='img1.jpg' className='w-100' />
+                {/* <img src={`${API}/blog/photo/${last[0]?.slug}`} style={{ width: '100%' }} /> */}
               </div>
-              <Link href={`/blogs/${last[0]?.slug}`}>
+              <Link href={`/blogs/${last[0]?.slug}`}> 
               <a className='text-start'>
                   <Nheading>
                     {last[0]?.title}
@@ -167,7 +166,7 @@ const Frontpage = () => {
             </div>
 
             <div className='col-md-4 text-center'>
-                  <img src="img1.jpg" className='w-100 first-bold-img' />
+              {/* <img src={`${API}/blog/photo/${last[1]?.slug}`} style={{ width: '100%' }} /> */}
               
               <Link href={`/blogs/${last[1]?.slug}`}>
               <a className='text-start'>
@@ -180,7 +179,7 @@ const Frontpage = () => {
             </div>
 
             <div className='col-md-4 text-center'>
-              <img src='img1.jpg' className='w-100' />
+            {/* <img src={`${API}/blog/photo/${last[2]?.slug}`} style={{ width: '100%' }} /> */}
               <Link href={`/blogs/${last[2]?.slug}`}>
               <a className='text-start'>
                   <Nheading>
@@ -1941,6 +1940,17 @@ const Frontpage = () => {
         </div>{/*main container fluid end here*/}
       
           
+        {/* javascript try */}
+        <h1>test</h1>
+        <div className="poll">
+          <div className='question'></div>
+          <div className='answers'></div>
+        </div>
+
+       
+
+
+
         
 
 
@@ -1948,5 +1958,10 @@ const Frontpage = () => {
       </>
   );
 };
+
+
+
+
+
 
 export default Frontpage;

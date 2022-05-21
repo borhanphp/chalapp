@@ -13,10 +13,7 @@ import Allnav from '../components/Allnav';
 import Layout from '../components/Layout';
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import '../styles/globals.css'
-// import '../assets/css/nifty.min.css'
-// import '../assets/css/bootstrap.min.css'
-// import '../assets/css/demo/nifty-demo-icons.min.css'
+import Sidebar from '../components/Sidebar'
 
 
 class MyApp extends App {

@@ -201,12 +201,10 @@ const CreateBlog = ({ router }) => {
 
     return (
         <>
-            <div className='container-fluid'>
+            {/* <div className='container-fluid'>
                 <div className='row'>
-                    <div className='col-2'>
-                        <Sidebar/>
-                    </div>
-                    <div className='col-10'>
+                   
+                    <div className='col-12'>
                         <h3 className='text-center'>Manage Your News Here</h3>
                         <hr/>
                     <div className="container-fluid pb-5">
@@ -249,7 +247,253 @@ const CreateBlog = ({ router }) => {
         </div>
                     </div>
                 </div>
+            </div> */}
+
+
+
+
+
+
+            <>
+ 
+ 
+
+  
+            <form onSubmit={publishBlog}>
+  
+    <div className="boxed">
+    
+      <div id="content-container bg-light">
+        <div id="page-content">
+       
+          <div className="row">
+            <div className="col-sm-6 col-sm-offset-6 toolbar-right text-right">
+              {/* <button className="btn btn-default">Preview</button>
+              <button className="btn btn-default">Draft</button> */}
+              <button className="btn btn-primary" type='submit'>Save &amp; Publish</button>
             </div>
+          </div>
+          {/*------------------------------*/}
+          <div className="fixed-fluid">
+            <div className="fixed-sm-300 pull-sm-right">
+              <div className="panel">
+                <div className="panel-body">
+                  <p className="text-main text-bold text-uppercase">
+                    Featured Image
+                  </p>
+                  <p>
+                    Featured images are images that represent an individual
+                    Post, Page, or Custom Post Type.
+                  </p>
+                  {/*Dropzonejs*/}
+                  {/*===================================================*/}
+                  <div className="dropzone-container mb-3">
+                    <form id="demo-dropzone" action="#">
+                      <div className="dz-default dz-message">
+                        <div className="dz-icon">
+                          <i className="demo-pli-upload-to-cloud icon-5x" />
+                        </div>
+                        <div>
+                          <span className="dz-text">Drop files to upload</span>
+                          <p className="text-sm text-muted">
+                            or click to pick manually
+                          </p>
+                        </div>
+                      </div>
+                      <div className="fallback">
+                      <small className="text-muted">Max size: 1mb</small>
+                            <br />
+                            <label className="btn btn-outline-info">
+                                Upload featured image
+                                <input onChange={handleChange('photo')} type="file" accept="image/*" hidden />
+                            </label>
+                      </div>
+                    </form>
+                  </div>
+                  {/*===================================================*/}
+                  {/* End Dropzonejs */}
+                 {/*  <hr />
+                  <p className="text-main text-bold text-uppercase">Publish</p>
+                  <div className="form-horizontal">
+                    <div className="form-group">
+                      <label
+                        className="col-sm-5 control-label text-left"
+                        htmlFor="demo-hor-inputpass"
+                      >
+                        Status
+                      </label>
+                      <div className="col-sm-7">
+                        <div className="select">
+                          <select>
+                            <option value="push">Published</option>
+                            <option value="push">Unpublish</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="form-group">
+                      <label
+                        className="col-sm-5 control-label text-left"
+                        htmlFor="demo-hor-inputpass"
+                      >
+                        Visibility
+                      </label>
+                      <div className="col-sm-7">
+                        <div className="select">
+                          <select>
+                            <option
+                              value="none"
+                              selected=""
+                              disabled="disabled"
+                            >
+                              Public
+                            </option>
+                            <option value="push">Private</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="form-group">
+                      <label
+                        className="col-sm-5 control-label text-left"
+                        htmlFor="demo-hor-inputpass"
+                      >
+                        Categories
+                      </label>
+                      <div className="col-sm-7">
+                        <div className="select">
+                          <select>
+                            <option
+                              value="none"
+                              selected=""
+                              disabled="disabled"
+                            >
+                              UnCategorized
+                            </option>
+                            <option value="push">Internet</option>
+                            <option value="push">Movies</option>
+                            <option value="push">Musics</option>
+                            <option value="push">Entertainment</option>
+                            <option value="push">Sports</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      
+                    </div>
+
+
+                  </div> */}
+
+                  <div>
+                        <h5>Categories</h5>
+                        <hr />
+
+                        <ul style={{ maxHeight: '200px', overflowY: 'scroll' }}>{showCategories()}</ul>
+                    </div>
+                  <div>
+                        <h5>Tags</h5>
+                        <hr />
+                        <ul style={{ maxHeight: '200px', overflowY: 'scroll' }}>{showTags()}</ul>
+                    </div>
+                  <hr />
+                  <p className="text-main text-sm text-uppercase text-bold">
+                    Public Settings
+                  </p>
+                  <div className="form-horizontal">
+                    <div className="form-group">
+                      <label
+                        className="col-sm-5 control-label text-left"
+                        htmlFor="demo-hor-inputpass"
+                      >
+                        Allow comments
+                      </label>
+                      <div className="col-sm-7">
+                        <input
+                          className="toggle-switch"
+                          id="demo-allow-comments"
+                          type="checkbox"
+                          defaultChecked=""
+                        />
+                        <label htmlFor="demo-allow-comments" />
+                      </div>
+                    </div>
+                    <div className="form-group">
+                      <label
+                        className="col-sm-5 control-label text-left"
+                        htmlFor="demo-hor-inputpass"
+                      >
+                        Allow trackbacks
+                      </label>
+                      <div className="col-sm-7">
+                        <input
+                          className="toggle-switch"
+                          id="demo-allow-tbpb"
+                          type="checkbox"
+                        />
+                        <label htmlFor="demo-allow-tbpb" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="fluid">
+{/*             
+              <div className="form-group">
+                <input
+                  type="text"
+                  placeholder="Blog Title"
+                  className="form-control input-lg"
+                  autofocus=""
+                />
+              </div> */}
+              
+                <div className="form-group">
+                    <label className=""><h5>News Title</h5></label>
+                    <input type="text" className="form-control" value={title} onChange={handleChange('title')} />
+                </div>
+
+                <div className="form-group">
+                    <h5 className='mt-4'>Full News</h5>
+                    <ReactQuill
+                        modules={QuillModules}
+                        formats={QuillFormats}
+                        value={body}
+                        placeholder=""
+                        onChange={handleBody}
+                        style={{height: '600px', background: 'white'}}
+
+                    />
+                    
+                </div>
+              
+
+               
+
+                <div>
+                    
+                     
+                    
+                </div>
+           
+            </div>
+          </div>
+        </div>
+        {/*===================================================*/}
+        {/*End page content*/}
+      </div>
+     
+    </div>
+    
+
+ 
+    </form>
+    
+  
+  
+</>
+
         </>
     );
 };

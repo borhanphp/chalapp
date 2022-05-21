@@ -1,15 +1,19 @@
 import React from 'react'
 import Link from 'next/link';
+import {signout, isAuth} from '../actions/auth'
 
 const Sidebar = () => {
+     
+
+
   return (
     <>
       
-                        <div className="bg-dark" style={{height:"100%"}}>
+                        {/* <div className="bg-dark" >
 
 
-                        <h4 className='text-white text-center'>Dashboard</h4>
-                        <nav class="nav flex-column text-white h-100">
+                        {/* <h4 className='text-white text-center'>Dashboard</h4> */}
+                        {/* <nav class="nav flex-column text-white h-100">
                             <Link href="/admin/crud/category-tag"><a className="nav-link active text-white">Category</a></Link>
                             <Link href="/admin/crud/category-tag"><a className="nav-link text-white">Tag</a></Link>
                             <Link href="/admin/crud/blogs"><a className="nav-link text-white">Blog</a></Link>
@@ -17,7 +21,7 @@ const Sidebar = () => {
                             <Link href="#"><a className="nav-link text-white">Setting</a></Link>
                             
                                    
-                        </nav>
+                        </nav> */}
 
 
 
@@ -49,135 +53,214 @@ const Sidebar = () => {
                                         <a>Profile</a>
                                     </Link>
                                 </li>
-                            </ul> */}
-                        </div>
+                            </ul> 
+                        </div> */}
 
                         
 
 
 
-                        {/* <!--MAIN NAVIGATION-->
-            <!--===================================================--> */}
-            <nav id="mainnav-container">
-                <div id="mainnav">
+                     
 
 
-                    {/* <!--OPTIONAL : ADD YOUR LOGO TO THE NAVIGATION-->
-                    <!--It will only appear on small screen devices.-->
-                    <!--================================ */}
-                    <div class="mainnav-brand">
-                        <a href="index.html" class="brand">
-                            <img src="img/logo.png" alt="Nifty Logo" class="brand-icon"/>
-                            <span class="brand-text">Nifty</span>
+
+
+
+            {/* *****************************************************************************
+            **************************************************************************** */}
+
+            
+          
+  
+  
+<>
+  
+
+
+  
+  <div id="container" style={{marginLeft: '-17px', position: "fixed", top: "0"}} className="effect aside-float aside-bright mainnav-lg">
+    {/*NAVBAR*/}
+    {/*===================================================*/}
+    
+    {/*===================================================*/}
+    {/*END NAVBAR*/}
+    <div className="boxed">
+     
+      
+      {/*MAIN NAVIGATION*/}
+      {/*===================================================*/}
+      <nav id="mainnav-container">
+        <div id="mainnav">
+          {/*OPTIONAL : ADD YOUR LOGO TO THE NAVIGATION*/}
+          {/*It will only appear on small screen devices.*/}
+          {/*================================
+              <div class="mainnav-brand">
+                  <a href="index.html" class="brand">
+                      <img src="img/logo.png" alt="Nifty Logo" class="brand-icon">
+                      <span class="brand-text">Nifty</span>
+                  </a>
+                  <a href="#" class="mainnav-toggle"><i class="pci-cross pci-circle icon-lg"></i></a>
+              </div>
+              */}
+          {/*Menu*/}
+          {/*================================*/}
+          <div id="mainnav-menu-wrap">
+            <div className="nano">
+              <div className="nano-content">
+           
+               
+                <ul id="mainnav-menu" className="list-group">
+                
+                <li className="">
+                  {isAuth() && isAuth().role === 0 && (
+                    <Link href="/user">
+                    <a href="#">
+                      <i className="demo-pli-home" />
+                      <span className="menu-title">Dashboard</span>
+                      <i className="arrow" />
+                    </a>
+                    </Link>
+                    )}
+                    {/*Submenu*/}
+                  
+                  </li>
+                  
+                  <li className="">
+                  {isAuth() && isAuth().role === 1 && (
+                    <Link href="/admin">
+                    <a href="#">
+                      <i className="demo-pli-home" />
+                      <span className="menu-title">Dashboard</span>
+                      <i className="arrow" />
+                    </a>
+                    </Link>
+                    )}
+                    {/*Submenu*/}
+                  
+                  </li>
+
+                 
+                  {/*Menu list item*/}
+                  <li>
+                    <Link href="/admin/crud/blogs">
+                      <a>
+                        <i className="demo-pli-split-vertical-2" />
+                        <span className="menu-title">Posts</span>
+                        <i className="arrow" />
+                      </a>
+                    </Link>
+
+                    {/*Submenu*/}
+                    <ul className="collapse">
+                      <li>
+                          <Link href="/admin/crud/blogs">
+                        <a >
+                          All Posts
                         </a>
-                        <a href="#" class="mainnav-toggle"><i class="pci-cross pci-circle icon-lg"></i></a>
-                    </div>
-                    {/* --> */}
+                        </Link>
+                      </li>
 
+                      <li>
+                        <Link href="/admin/crud/blog">
+                            <a >
+                            Add New Post
+                            </a>
+                        </Link>
+                      </li>
+                      
+                      
+                    </ul>
+                  </li>
 
-
-                    {/* <!--Menu--> */}
-                    {/* <!--================================--> */}
-                    <div id="mainnav-menu-wrap">
-                        <div class="nano">
-                            <div class="nano-content">
-
-                               
-
-
-                                <ul id="mainnav-menu" class="list-group">
-						
-						            {/* <!--Category name--> */}
-						            <li class="list-header">Navigation</li>
-						
-						            {/* <!--Menu list item--> */}
-						            <li>
-						                <a href="#">
-						                    <i class="demo-pli-home"></i>
-						                    <span class="menu-title">Dashboard</span>
-											<i class="arrow"></i>
-						                </a>
-						
-						                {/* <!--Submenu--> */}
-						                <ul class="collapse">
-						                    <li><a href="index.html">Dashboard 1</a></li>
-											<li><a href="dashboard-2.html">Dashboard 2</a></li>
-											<li><a href="dashboard-3.html">Dashboard 3</a></li>
-											
-						                </ul>
-						            </li>
-						
-						            {/* <!--Menu list item--> */}
-						            <li>
-						                <a href="#">
-						                    <i class="demo-pli-split-vertical-2"></i>
-						                    <span class="menu-title">Layouts</span>
-											<i class="arrow"></i>
-						                </a>
-						
-						                {/* <!--Submenu--> */}
-						                <ul class="collapse">
-						                    <li><a href="layouts-collapsed-navigation.html">Collapsed Navigation</a></li>
-											<li><a href="layouts-offcanvas-navigation.html">Off-Canvas Navigation</a></li>
-											<li><a href="layouts-offcanvas-slide-in-navigation.html">Slide-in Navigation</a></li>
-											<li><a href="layouts-offcanvas-revealing-navigation.html">Revealing Navigation</a></li>
-											<li class="list-divider"></li>
-											<li><a href="layouts-aside-right-side.html">Aside on the right side</a></li>
-											<li><a href="layouts-aside-left-side.html">Aside on the left side</a></li>
-											<li><a href="layouts-aside-dark-theme.html">Dark version of aside</a></li>
-											<li class="list-divider"></li>
-											<li><a href="layouts-fixed-navbar.html">Fixed Navbar</a></li>
-											<li><a href="layouts-fixed-footer.html">Fixed Footer</a></li>
-											
-						                </ul>
-						            </li>
-						
-						            {/* <!--Menu list item--> */}
-						            <li>
-						                <a href="widgets.html">
-						                    <i class="demo-pli-gear"></i>
-						                    <span class="menu-title">
-												Widgets
-												<span class="pull-right badge badge-warning">24</span>
-											</span>
-						                </a>
-						            </li>
-						
-						           
-						
-						
-						            {/* <!--Menu list item--> */}
-						            <li class="active-sub">
-						                <a href="#">
-						                    <i class="demo-pli-speech-bubble-5"></i>
-						                    <span class="menu-title">Blog Apps</span>
-											<i class="arrow"></i>
-						                </a>
-						
-						                {/* <!--Submenu--> */}
-						                <ul class="collapse in">
-											<li class="list-divider"></li>
-											<li class="active-link"><a href="blog-manage-posts.html">Manage Posts</a></li>
-											<li><a href="blog-add-edit-post.html">Add Edit Post</a></li>
-											
-						                </ul>
-						            </li>
-						</ul>
-
-                            </div>
-                        </div>
-                    </div>
-                    {/* <!--================================-->
-                    <!--End menu--> */}
-
-                </div>
-            </nav>
-            {/* <!--===================================================-->
-            <!--END MAIN NAVIGATION--> */}
-
-
+                  <li>
+                    <Link href="/admin/crud/category-tag">
+                      <a>
+                        <i className="demo-pli-split-vertical-2" />
+                        <span className="menu-title">Category and Tags</span>
+                        <i className="arrow" />
+                      </a>
+                    </Link>
                     
-      </>
+                    {/*Submenu*/}
+                    <ul className="collapse">
+                      <li>
+                        <a href="layouts-collapsed-navigation.html">
+                          Collapsed Navigation
+                        </a>
+                      </li>
+                      
+                      
+                    </ul>
+                  </li>
+                  {/*Menu list item*/}
+
+
+                  <li>
+                    <Link href="/admin/ads/ads">
+                      <a>
+                        <i className="demo-pli-split-vertical-2" />
+                        <span className="menu-title">Ads Setting</span>
+                        <i className="arrow" />
+                      </a>
+                    </Link>
+                    
+                    
+                  </li>
+
+                  <li>
+                    <Link href="/admin/ads/logo">
+                      <a>
+                        <i className="demo-pli-split-vertical-2" />
+                        <span className="menu-title">Site Setting</span>
+                        <i className="arrow" />
+                      </a>
+                    </Link>
+                  </li>
+
+                  
+                  <li>
+                    <Link href="/user/update">
+                      <a>
+                        <i className="demo-pli-split-vertical-2" />
+                        <span className="menu-title">User Update</span>
+                        <i className="arrow" />
+                      </a>
+                    </Link>
+                    
+                    
+                  </li>
+               
+              
+                
+               
+                  
+                  
+                 
+                
+                 
+               
+                  
+                 
+                </ul>
+               
+              </div>
+            </div>
+          </div>
+         
+        </div>
+      </nav>
+      {/*===================================================*/}
+      {/*END MAIN NAVIGATION*/}
+    </div>
+  </div>
+  
+</>
+
+  
+  
+</>
+
+          
     
   );
 }

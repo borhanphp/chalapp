@@ -17,7 +17,7 @@ const BlogRead = ({ username }) => {
 
     const loadBlogs = () => {
         list(username).then(data => {
-            if (data.error) {
+            if (data?.error) {
                 console.log(data.error);
             } else {
                 setBlogs(data);
@@ -76,7 +76,6 @@ const BlogRead = ({ username }) => {
                         
 
                                                 <tr key={i}>
-					                            <td><img class="img-responsive img-sm" src="img\thumbs\img-1.jpeg" alt="thumbs"/></td>
 					                            <td><a class="btn-link" href="#">{blog.title}</a></td>
 					                            <td><span class="text-muted">{moment(blog.updatedAt).fromNow()}</span></td>
 					                            <td>{blog.categories.name}</td>
@@ -114,13 +113,15 @@ const BlogRead = ({ username }) => {
 
     return (
         <>
+
+
+
+         
         
-        <div className='container-fluid'>
+        <div className='container-fluid mt-5'>
                 <div className='row'>
-                    <div className='col-2'>
-                        <Sidebar/>
-                    </div>
-                    <div className='col-10'>
+                    
+                    <div className='col-12'>
                     <h3 className='text-center'>Manage Your News Here</h3>
                         <hr/>
                         <div className='row'>
@@ -134,7 +135,6 @@ const BlogRead = ({ username }) => {
                                 <table class="table table-striped table-vcenter">
                                     <thead>
                                         <tr>
-                                            <th>Image</th>
                                             <th>Post Title</th>
                                             <th>Creation Date</th>
                                             <th>Categories</th>
@@ -180,6 +180,12 @@ const BlogRead = ({ username }) => {
                  
                 </div>
                 </div>
+
+
+
+
+
+             
             
         </>
     );

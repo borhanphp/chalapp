@@ -30,10 +30,10 @@ const ProfileUpdate = () => {
             } else {
                 setValues({
                     ...values,
-                    username: data.username,
-                    name: data.name,
-                    email: data.email,
-                    about: data.about
+                    username: data?.username,
+                    name: data?.name,
+                    email: data?.email,
+                    about: data?.about
                 });
             }
         });
@@ -61,10 +61,10 @@ const ProfileUpdate = () => {
                 updateUser(data, () => {
                     setValues({
                         ...values,
-                        username: data.username,
-                        name: data.name,
-                        email: data.email,
-                        about: data.about,
+                        username: data?.username,
+                        name: data?.name,
+                        email: data?.email,
+                        about: data?.about,
                         password: '',
                         success: true,
                         loading: false

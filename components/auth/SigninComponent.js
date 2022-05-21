@@ -1,7 +1,7 @@
 import React from 'react'
+import Head from 'next/head'
 import { useState, useEffect } from 'react'
 import Router from 'next/router'
-import Styles from './login.module.css'
 import {authenticate, signin, isAuth} from '../../actions/auth'
 
 const SigninComponent = () => {
@@ -59,8 +59,8 @@ const SigninComponent = () => {
 
   const loginForm = () => {
     return (
-        <>
-        <main className={Styles.main}>
+      <>
+        {/* <main className={Styles.main}>
           <div className={Styles.login}>
             <h1>Login</h1>
             <form onSubmit={handleSubmit}>
@@ -69,7 +69,78 @@ const SigninComponent = () => {
               <button>Login</button>
             </form>
           </div>
-        </main>
+        </main> */}
+
+
+
+
+
+
+
+
+        {/* *********************************************************************
+        ************************************************************************/}
+
+
+
+<div id="container" className="cls-container">
+  <div id="bg-overlay" />
+  <div className="cls-content">
+    <div className="cls-content-sm panel">
+      <div className="panel-body">
+        <div className="mar-ver pad-btm">
+          <h1 className="h3">Account Login</h1>
+          <p>Sign In to your account</p>
+        </div>
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <input
+              type="text" 
+              name="email" 
+              value={email}
+              onChange={handleChange('email')}
+              className="form-control"
+              placeholder="Email Address"
+              autofocus=""
+            />
+          </div>
+          <div className="form-group">
+            <input
+              type="password" 
+              name="password" 
+              value={password}
+              onChange={handleChange('password')}
+              className="form-control"
+              placeholder="Password"
+            />
+          </div>
+          {/* <div className="checkbox pad-btm text-left">
+            <input
+              id="demo-form-checkbox"
+              className="magic-checkbox"
+              type="checkbox"
+            />
+            <label htmlFor="demo-form-checkbox">Remember me</label>
+          </div> */}
+          <button className="btn btn-primary btn-lg btn-block" type="submit">
+            Sign In
+          </button>
+        </form>
+      </div>
+      <div className="pad-all">
+        <a href="pages-password-reminder.html" className="btn-link mar-rgt">
+          Forgot password ?
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+        {/* ********************************************************************
+        ********************************************************************* */}
       </>
     );
   };

@@ -1,7 +1,17 @@
 import React from 'react';
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
+import { API } from '../config';
+import HomeRightAds from './frontend/homeRightAds';
 
 const Postsidebar = () => {
+
+	const [last, setLastNews] = useState([]);
+
+	// Latest news
+	useEffect(() => {
+		fetch(`${API}/posts`).then((res)=>{return res.json()}).then((data)=>{setLastNews(data)})}, []); 
+	  
   return (
       <>
                     <div className="col-lg-12 mt-3 panspd pl-0">
@@ -16,13 +26,25 @@ const Postsidebar = () => {
 							</ul>
 							<div className="tab-content" id="pills-tabContent">
 								<div class="tab-pane fade show active" id="letest" role="tabpanel" aria-labelledby="pills-home-tab">
-									<p className="border-bottom pb-1 px-4"><i className="fas fa-snowflake text-danger"></i><a className="text-dark font-weight-normal" href="#">চলমান ডেস্ক: নির্বাচন কমিশনে (ইসি) সচিব মো. হুমায়ুন কবীর খোন্দকার বলেছেন</a></p>
-									<p className="border-bottom pb-1 px-4"><i className="fas fa-snowflake text-danger"></i><a className="text-dark font-weight-normal" href="#">চলমান ডেস্ক: নির্বাচন কমিশনে (ইসি) সচিব মো. হুমায়ুন কবীর খোন্দকার বলেছেন</a></p>
-									<p className="border-bottom pb-1 px-4"><i className="fas fa-snowflake text-danger"></i><a className="text-dark font-weight-normal" href="#">চলমান ডেস্ক: নির্বাচন কমিশনে (ইসি) সচিব মো. হুমায়ুন কবীর খোন্দকার বলেছেন</a></p>
-									<p className="border-bottom pb-1 px-4"><i className="fas fa-snowflake text-danger"></i><a className="text-dark font-weight-normal" href="#">চলমান ডেস্ক: নির্বাচন কমিশনে (ইসি) সচিব মো. হুমায়ুন কবীর খোন্দকার বলেছেন</a></p>
-									<p className="border-bottom pb-1 px-4"><i className="fas fa-snowflake text-danger"></i><a className="text-dark font-weight-normal" href="#">চলমান ডেস্ক: নির্বাচন কমিশনে (ইসি) সচিব মো. হুমায়ুন কবীর খোন্দকার বলেছেন</a></p>
-									<p className="border-bottom pb-1 px-4"><i className="fas fa-snowflake text-danger"></i><a className="text-dark font-weight-normal" href="#">চলমান ডেস্ক: নির্বাচন কমিশনে (ইসি) সচিব মো. হুমায়ুন কবীর খোন্দকার বলেছেন</a></p>
-									<p className="border-bottom pb-1 px-4"><i className="fas fa-snowflake text-danger"></i><a className="text-dark font-weight-normal" href="#">চলমান ডেস্ক: নির্বাচন কমিশনে (ইসি) সচিব মো. হুমায়ুন কবীর খোন্দকার বলেছেন</a></p>
+									<p className="border-bottom pb-1 px-4"><i className="fas fa-snowflake text-danger"></i>
+										
+											<Link href={`/blogs/${last[0]?.slug}`}>
+												<a className="text-dark font-weight-normal">
+													
+														{last[0]?.title}
+													
+												</a>
+											</Link>
+										
+									</p>
+
+									<p className="border-bottom pb-1 px-4"><i className="fas fa-snowflake text-danger"></i><Link href={`/blogs/${last[1]?.slug}`}><a className="text-dark font-weight-normal">{last[1]?.title}</a></Link></p>
+									<p className="border-bottom pb-1 px-4"><i className="fas fa-snowflake text-danger"></i><Link href={`/blogs/${last[1]?.slug}`}><a className="text-dark font-weight-normal">{last[2]?.title}</a></Link></p>
+									<p className="border-bottom pb-1 px-4"><i className="fas fa-snowflake text-danger"></i><Link href={`/blogs/${last[1]?.slug}`}><a className="text-dark font-weight-normal">{last[3]?.title}</a></Link></p>
+									<p className="border-bottom pb-1 px-4"><i className="fas fa-snowflake text-danger"></i><Link href={`/blogs/${last[1]?.slug}`}><a className="text-dark font-weight-normal">{last[4]?.title}</a></Link></p>
+									<p className="border-bottom pb-1 px-4"><i className="fas fa-snowflake text-danger"></i><Link href={`/blogs/${last[1]?.slug}`}><a className="text-dark font-weight-normal">{last[5]?.title}</a></Link></p>
+									<p className="border-bottom pb-1 px-4"><i className="fas fa-snowflake text-danger"></i><Link href={`/blogs/${last[1]?.slug}`}><a className="text-dark font-weight-normal">{last[6]?.title}</a></Link></p>
+									<p className="border-bottom pb-1 px-4"><i className="fas fa-snowflake text-danger"></i><Link href={`/blogs/${last[1]?.slug}`}><a className="text-dark font-weight-normal">{last[7]?.title}</a></Link></p>
 								</div>
 								<div className="tab-pane fade pl-3" id="popular" role="tabpanel" aria-labelledby="pills-profile-tab"> 
 									<p className="pb-3 border-bottom pb-1 px-4"><i className="fas fa-snowflake pr-2 text-danger"></i><a className="text-dark font-weight-normal" href="#">চলমান ডেস্ক: নির্বাচন কমিশনে (ইসি) সচিব মো. হুমায়ুন কবীর খোন্দকার বলেছেন</a></p>
@@ -38,14 +60,7 @@ const Postsidebar = () => {
 
 					<div className='col-lg-12 mt-2'>
 						
-						<Link href='#'>
-							<a>
-								<img 
-									src='../ads3.gif'
-									className='w-100'
-								/>
-							</a>
-						</Link>	
+					<HomeRightAds/>
 					</div>
       </>
   )
