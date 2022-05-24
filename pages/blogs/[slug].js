@@ -172,8 +172,8 @@ const SingleBlog = ({ blog, query }) => {
 
 SingleBlog.getInitialProps = ({ query }) => {
     return singleBlog(query.slug).then(data => {
-        if (data.error) {
-            console.log(data.error);
+        if (data?.error) {
+            console.log(data?.error);
         } else {
             // console.log('GET INITIAL PROPS IN SINGLE BLOG', data);
             return { blog: data, query };

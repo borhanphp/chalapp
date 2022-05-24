@@ -58,9 +58,10 @@ const Postsidebar = () => {
 						</div>
 					</div>
 
-					<div className='col-lg-12 mt-2'>
-						
+					<div className='col-lg-12 mt-2' style={{position: "-webkit-sticky", position: "sticky", top: "0"}}>
+					
 					<HomeRightAds/>
+					
 					</div>
       </>
   )

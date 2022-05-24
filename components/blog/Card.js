@@ -27,7 +27,7 @@ const Card = ({ blog }) => {
                                 
                                 <div className="row border border-secondary mb-2">
                                     <div className='col-lg-4'>
-                                        This is image sectin
+                                    <img src={`${API}/blog/photo/${blog.slug}`} className='w-100 p-3' style={{height: "100%"}}/>
                                     </div>
                                     <div className='col-lg-8 row'>
                                         <div className='col-lg-12'>

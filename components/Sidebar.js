@@ -84,7 +84,7 @@ const Sidebar = () => {
     
     {/*===================================================*/}
     {/*END NAVBAR*/}
-    <div className="boxed">
+   
      
       
       {/*MAIN NAVIGATION*/}
@@ -173,10 +173,57 @@ const Sidebar = () => {
                   </li>
 
                   <li>
+                    <Link href="/admin/crud/blogs">
+                      <a>
+                        <i className="demo-pli-split-vertical-2" />
+                        <span className="menu-title">Pages</span>
+                        <i className="arrow" />
+                      </a>
+                    </Link>
+
+                    {/*Submenu*/}
+                    <ul className="collapse">
+                      <li>
+                          <Link href="/admin/page/about">
+                        <a >
+                          About Us
+                        </a>
+                        </Link>
+                      </li>
+
+                      <li>
+                        <Link href="/admin/page/advertisement">
+                            <a >
+                            Advertisement
+                            </a>
+                        </Link>
+                      </li>
+
+                      <li>
+                        <Link href="/admin/page/editor">
+                            <a >
+                            Editor
+                            </a>
+                        </Link>
+                      </li>
+
+                      <li>
+                        <Link href="/admin/page/contact">
+                            <a >
+                            Contact
+                            </a>
+                        </Link>
+                      </li>
+                      
+                      
+                    </ul>
+                  </li>
+
+                  <li>
                     <Link href="/admin/crud/category-tag">
                       <a>
                         <i className="demo-pli-split-vertical-2" />
-                        <span className="menu-title">Category and Tags</span>
+                        <span className="menu-title">Categories and Tags</span>
                         <i className="arrow" />
                       </a>
                     </Link>
@@ -185,7 +232,7 @@ const Sidebar = () => {
                     <ul className="collapse">
                       <li>
                         <a href="layouts-collapsed-navigation.html">
-                          Collapsed Navigation
+                          Contact Us
                         </a>
                       </li>
                       
@@ -252,7 +299,7 @@ const Sidebar = () => {
       {/*===================================================*/}
       {/*END MAIN NAVIGATION*/}
     </div>
-  </div>
+
   
 </>
 

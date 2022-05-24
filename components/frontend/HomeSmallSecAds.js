@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { API } from '../../config';
 import styled from 'styled-components'
 import axios from 'axios';
+import Image from 'next/image';
 
 
 
@@ -31,7 +32,7 @@ const HomeSmallSecAds = () => {
                             return (
                                 
                                 <Link href={singleData.url}>
-                                    <img src={`data:image/png;base64,${base64String}`} className='w-100' style={{cursor: "pointer", height: '90px'}} alt=""/>
+                                    <Image src={`data:image/png;base64,${base64String}`} width = '100' height = '15' layout="responsive" className='w-100' style={{cursor: "pointer", height: '90px'}} alt=""/>
                                 </Link>
                                     
                                 

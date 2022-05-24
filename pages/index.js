@@ -2,9 +2,10 @@ import Frontpage from '../components/frontend/Frontpage'
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import Image from 'next/image';
 import renderHTML from 'react-render-html';
 import styled from 'styled-components';
-import styles from '../styles/Frontpage.module.css'
+import styles from '../styles/Frontpage.module.css';
 import { withRouter } from 'next/router';
 import { API, DOMAIN, APP_NAME, FB_APP_ID } from '../config';
 import HomeRightAds from '../components/frontend/HomeRightAds';
@@ -56,7 +57,9 @@ const Blogs = ({ sports, technology, education, health, lifestyle, artlit, relig
           <div className='row mt-3'>
             <div className='col-md-4 text-center'>
               <div className='col-md-12 col-sm-12'>
-                <img src={`${API}/blog/photo/${last[0]?.slug}`} style={{ width: '100%', height: '250px'}}/>
+              
+                <Image src = {`${API}/blog/photo/${last[0]?.slug}`} width = '100' height = '60' layout="responsive"/>
+                {/* style={{ width: '100%', height: '250px'}} */}
               </div>
               <Link href={`/blogs/${last[0]?.slug}`}> 
               <a className='text-start'>
@@ -69,7 +72,7 @@ const Blogs = ({ sports, technology, education, health, lifestyle, artlit, relig
             </div>
 
             <div className='col-md-4 text-center'>
-            <img src={`${API}/blog/photo/${last[1]?.slug}`} style={{ width: '100%', height: '250px'}}/>
+            <Image src={`${API}/blog/photo/${last[1]?.slug}`} width = '100' height = '60' layout="responsive"/>
               
               <Link href={`/blogs/${last[1]?.slug}`}>
               <a className='text-start'>
@@ -82,7 +85,7 @@ const Blogs = ({ sports, technology, education, health, lifestyle, artlit, relig
             </div>
 
             <div className='col-md-4 text-center'>
-            <img src={`${API}/blog/photo/${last[2]?.slug}`} style={{ width: '100%', height: '250px'}}/>
+            <Image src={`${API}/blog/photo/${last[2]?.slug}`} width = '100' height = '60' layout="responsive" />
               <Link href={`/blogs/${last[2]?.slug}`}>
               <a className='text-start'>
                   <Nheading>
@@ -98,7 +101,11 @@ const Blogs = ({ sports, technology, education, health, lifestyle, artlit, relig
 
           <div className='row'>
             <div className='col-md-12'>
-              <p className={styles.america}>আমেরিকা</p>
+            <Link href='/categories/america'>
+              <p className={styles.america} style={{cursor: "pointer"}}>
+                আমেরিকা
+                </p>
+                </Link>
               <div className={styles.hr}></div>
             </div>
           </div>
@@ -109,7 +116,7 @@ const Blogs = ({ sports, technology, education, health, lifestyle, artlit, relig
 
             <div className='col-lg-3 col-6 text-center'>
               {/* <img src='img1.jpg' className='w-100' /> */}
-              <img src={`${API}/blog/photo/${america[0]?.slug}`} style={{width: "100%", height: "180px"}}/>
+              <Image src={`${API}/blog/photo/${america[0]?.slug}`} width = '100' height = '60' layout="responsive" />
               <Link href={`/blogs/${america[0]?.slug}`}>
               <a className='text-start'>
                 <Nheading>
@@ -123,7 +130,7 @@ const Blogs = ({ sports, technology, education, health, lifestyle, artlit, relig
 
             <div className='col-lg-3 col-6 text-center'>
               {/* <img src='img1.jpg' className='w-100' /> */}
-              <img src={`${API}/blog/photo/${america[1]?.slug}`} style={{width: "100%", height: "180px"}}/>
+              <Image src={`${API}/blog/photo/${america[1]?.slug}`} width = '100' height = '60' layout="responsive"/>
               <Link href={`/blogs/${america[1]?.slug}`}>
               <a className='text-start'>
                 <Nheading>
@@ -137,7 +144,8 @@ const Blogs = ({ sports, technology, education, health, lifestyle, artlit, relig
 
             <div className='col-lg-3 col-6 text-center'>
               {/* <img src='img1.jpg' className='w-100' /> */}
-              <img src={`${API}/blog/photo/${america[2]?.slug}`} style={{width: "100%", height: "180px"}}/>
+              <Image src={`${API}/blog/photo/${america[2]?.slug}`} width = '100' height = '60' layout="responsive"/>
+              {/* style={{width: "100%", height: "180px"}} */}
               <Link href={`/blogs/${america[2]?.slug}`}>
               <a className='text-start'>
                  <Nheading>
@@ -151,7 +159,7 @@ const Blogs = ({ sports, technology, education, health, lifestyle, artlit, relig
 
             <div className='col-lg-3 col-6 text-center'>
               {/* <img src='img1.jpg' className='w-100' /> */}
-              <img src={`${API}/blog/photo/${america[3]?.slug}`} style={{width: "100%", height: "180px"}}/>
+              <Image src={`${API}/blog/photo/${america[3]?.slug}`} width = '100' height = '60' layout="responsive"/>
               <Link href={`/blogs/${america[3]?.slug}`}>
               <a className='text-start'>
                   <Nheading>
@@ -164,7 +172,7 @@ const Blogs = ({ sports, technology, education, health, lifestyle, artlit, relig
 
             <div className='col-lg-3 col-6 text-center'>
               {/* <img src='img1.jpg' className='w-100' /> */}
-              <img src={`${API}/blog/photo/${america[4]?.slug}`} style={{width: "100%", height: "180px"}}/>
+              <Image src={`${API}/blog/photo/${america[4]?.slug}`} width = '100' height = '60' layout="responsive"/>
               <Link href={`/blogs/${america[4]?.slug}`}>
               <a className='text-start'>
                   <Nheading>
@@ -177,7 +185,7 @@ const Blogs = ({ sports, technology, education, health, lifestyle, artlit, relig
 
             <div className='col-lg-3 col-6 text-center'>
               {/* <img src='img1.jpg' className='w-100' /> */}
-              <img src={`${API}/blog/photo/${america[5]?.slug}`} style={{width: "100%", height: "180px"}}/>
+              <Image src={`${API}/blog/photo/${america[5]?.slug}`} width = '100' height = '60' layout="responsive"/>
               <Link href={`/blogs/${america[5]?.slug}`}>
               <a className='text-start'>
                   <Nheading>
@@ -190,7 +198,7 @@ const Blogs = ({ sports, technology, education, health, lifestyle, artlit, relig
 
             <div className='col-lg-3 col-6 text-center'>
               {/* <img src='img1.jpg' className='w-100' /> */}
-              <img src={`${API}/blog/photo/${america[6]?.slug}`} style={{width: "100%", height: "180px"}}/>
+              <Image src={`${API}/blog/photo/${america[6]?.slug}`} width = '100' height = '60' layout="responsive"/>
               <Link href={`/blogs/${america[6]?.slug}`}>
               <a className='text-start'>
                   <Nheading>
@@ -203,7 +211,7 @@ const Blogs = ({ sports, technology, education, health, lifestyle, artlit, relig
 
             <div className='col-lg-3 col-6 text-center'>
               {/* <img src='img1.jpg' className='w-100' /> */}
-              <img src={`${API}/blog/photo/${america[7]?.slug}`} style={{width: "100%", height: "180px"}}/>
+              <Image src={`${API}/blog/photo/${america[7]?.slug}`} width = '100' height = '60' layout="responsive"/>
               <Link href={`/blogs/${america[7]?.slug}`}>
               <a className='text-start'>
                   <Nheading>
@@ -226,7 +234,7 @@ const Blogs = ({ sports, technology, education, health, lifestyle, artlit, relig
           <div className='row mt-3'>
             <div className='col-md-3'>
               {/* <img src='img1.jpg' className={styles.borderimg} /> */}
-              <img src={`${API}/blog/photo/${muktomot[0]?.slug}`} className={styles.borderimg} style={{width: "100%", height: "180px"}}/>
+              <Image src={`${API}/blog/photo/${muktomot[0]?.slug}`} className={styles.borderimg} width = '100' height = '60' layout="responsive"/>
               <h4 className={styles.borderst}>
                 <Link href={`/blogs/${muktomot[0]?.slug}`}>
                   <a> 
@@ -238,7 +246,7 @@ const Blogs = ({ sports, technology, education, health, lifestyle, artlit, relig
 
             <div className='col-md-3'>
               {/* <img src='img1.jpg' className={styles.borderimg} /> */}
-              <img src={`${API}/blog/photo/${muktomot[1]?.slug}`} className={styles.borderimg} style={{width: "100%", height: "180px"}}/>
+              <Image src={`${API}/blog/photo/${muktomot[1]?.slug}`} className={styles.borderimg} width = '100' height = '60' layout="responsive"/>
               <h4 className={styles.borderst}>
                 <Link href={`/blogs/${muktomot[1]?.slug}`}>
                   <a> 
@@ -250,7 +258,7 @@ const Blogs = ({ sports, technology, education, health, lifestyle, artlit, relig
 
             <div className='col-md-3'>
               {/* <img src='img1.jpg' className={styles.borderimg} /> */}
-              <img src={`${API}/blog/photo/${muktomot[2]?.slug}`} className={styles.borderimg} style={{width: "100%", height: "180px"}}/>
+              <Image src={`${API}/blog/photo/${muktomot[2]?.slug}`} className={styles.borderimg} width = '100' height = '60' layout="responsive"/>
               <h4 className={styles.borderst}>
                 <Link href={`/blogs/${muktomot[2]?.slug}`}>
                   <a>
@@ -262,7 +270,7 @@ const Blogs = ({ sports, technology, education, health, lifestyle, artlit, relig
 
             <div className='col-md-3'>
               {/* <img src='img1.jpg' className={styles.borderimg} /> */}
-              <img src={`${API}/blog/photo/${muktomot[3]?.slug}`} className={styles.borderimg} style={{width: "100%", height: "180px"}}/>
+              <Image src={`${API}/blog/photo/${muktomot[3]?.slug}`} className={styles.borderimg} width = '100' height = '60' layout="responsive"/>
               <h4 className={styles.borderst}>
                 <Link href={`/blogs/${muktomot[3]?.slug}`}>
                   <a> 
@@ -291,7 +299,7 @@ const Blogs = ({ sports, technology, education, health, lifestyle, artlit, relig
               <div className={styles.specialsec}>
                 {/* <img src='img1.jpg' className='w-100 h-100' /> */}
                 
-                <img src={`${API}/blog/photo/${special[0]?.slug}`} className='w-100 h-100'/>
+                <Image src={`${API}/blog/photo/${special[0]?.slug}`} width = '100' height = '100' layout="responsive"/>
                 <h4 className={styles.bottomleft}>
                   <Link href={`/blogs/${special[0]?.slug}`}>
                     <a> 
@@ -305,7 +313,7 @@ const Blogs = ({ sports, technology, education, health, lifestyle, artlit, relig
             <div className='col-md-3'>
               <div className={styles.specialsec}>
                 {/* <img src='img1.jpg' className='w-100 h-100' /> */}
-                <img src={`${API}/blog/photo/${special[1]?.slug}`} className='w-100 h-100'/>
+                <Image src={`${API}/blog/photo/${special[1]?.slug}`} width = '100' height = '100' layout="responsive"/>
                 <h4 className={styles.bottomleft}>
                   <Link href={`/blogs/${special[1]?.slug}`}>
                     <a> 
@@ -319,7 +327,7 @@ const Blogs = ({ sports, technology, education, health, lifestyle, artlit, relig
             <div className='col-md-3'>
               <div className={styles.specialsec}>
                 {/* <img src='img1.jpg' className='w-100 h-100' /> */}
-                <img src={`${API}/blog/photo/${special[2]?.slug}`} className='w-100 h-100'/>
+                <Image src={`${API}/blog/photo/${special[2]?.slug}`} width = '100' height = '100' layout="responsive"/>
                 <h4 className={styles.bottomleft}>
                   <Link href={`/blogs/${special[2]?.slug}`}>
                     <a> 
@@ -333,7 +341,7 @@ const Blogs = ({ sports, technology, education, health, lifestyle, artlit, relig
             <div className='col-md-3'>
               <div className={styles.specialsec}>
                 {/* <img src='img1.jpg' className='w-100 h-100' /> */}
-                <img src={`${API}/blog/photo/${special[3]?.slug}`} className='w-100 h-100'/>
+                <Image src={`${API}/blog/photo/${special[3]?.slug}`} width = '100' height = '100' layout="responsive"/>
                 <h4 className={styles.bottomleft}>
                   <Link href={`/blogs/${special[3]?.slug}`}>
                     <a> 
@@ -360,7 +368,7 @@ const Blogs = ({ sports, technology, education, health, lifestyle, artlit, relig
                 <div className='col-md-4 mt-3'>
                   <div className={styles.banglasec}>
                     {/* <img src='img1.jpg' className='w-100'/> */}
-                    <img src={`${API}/blog/photo/${bangladesh[0]?.slug}`} className='w-100' style={{width: "100%", height: "150px"}}/>
+                    <Image src={`${API}/blog/photo/${bangladesh[0]?.slug}`} width = '100' height = '55' layout="responsive"/>
                     <h4 className='p-2'>
                       <Link href={`/blogs/${bangladesh[0]?.slug}`}>
                         <a>
@@ -375,7 +383,7 @@ const Blogs = ({ sports, technology, education, health, lifestyle, artlit, relig
                 <div className='col-md-4 mt-3'>
                   <div className={styles.banglasec}>
                     {/* <img src='img1.jpg' className='w-100'/> */}
-                    <img src={`${API}/blog/photo/${bangladesh[1]?.slug}`} className='w-100' style={{width: "100%", height: "150px"}}/>
+                    <Image src={`${API}/blog/photo/${bangladesh[1]?.slug}`} width = '100' height = '55' layout="responsive"/>
                     <h4 className='p-2'>
                       <Link href={`/blogs/${bangladesh[1]?.slug}`}>
                         <a>  
@@ -390,7 +398,7 @@ const Blogs = ({ sports, technology, education, health, lifestyle, artlit, relig
                 <div className='col-md-4 mt-3'>
                   <div className={styles.banglasec}>
                     {/* <img src='img1.jpg' className='w-100'/> */}
-                    <img src={`${API}/blog/photo/${bangladesh[2]?.slug}`} className='w-100' style={{width: "100%", height: "150px"}}/>
+                    <Image src={`${API}/blog/photo/${bangladesh[2]?.slug}`} width = '100' height = '55' layout="responsive"/>
                     <h4 className='p-2'>
                       <Link href={`/blogs/${bangladesh[2]?.slug}`}>
                         <a>  
@@ -405,7 +413,7 @@ const Blogs = ({ sports, technology, education, health, lifestyle, artlit, relig
                 <div className='col-md-4 mt-3'>
                   <div className={styles.banglasec}>
                     {/* <img src='img1.jpg' className='w-100'/> */}
-                    <img src={`${API}/blog/photo/${bangladesh[3]?.slug}`} className='w-100' style={{width: "100%", height: "150px"}}/>
+                    <Image src={`${API}/blog/photo/${bangladesh[3]?.slug}`} width = '100' height = '55' layout="responsive"/>
                     <h4 className='p-2'>
                       <Link href={`/blogs/${bangladesh[3]?.slug}`}>
                         <a>
@@ -420,7 +428,7 @@ const Blogs = ({ sports, technology, education, health, lifestyle, artlit, relig
                 <div className='col-md-4 mt-3'>
                   <div className={styles.banglasec}>
                     {/* <img src='img1.jpg' className='w-100'/> */}
-                    <img src={`${API}/blog/photo/${bangladesh[4]?.slug}`} className='w-100' style={{width: "100%", height: "150px"}}/>
+                    <Image src={`${API}/blog/photo/${bangladesh[4]?.slug}`} width = '100' height = '55' layout="responsive"/>
                     <h4 className='p-2'>
                       <Link href={`/blogs/${bangladesh[4]?.slug}`}>
                         <a>
@@ -435,7 +443,7 @@ const Blogs = ({ sports, technology, education, health, lifestyle, artlit, relig
                 <div className='col-md-4 mt-3'>
                   <div className={styles.banglasec}>
                     {/* <img src='img1.jpg' className='w-100'/> */}
-                    <img src={`${API}/blog/photo/${bangladesh[3]?.slug}`} className='w-100' style={{width: "100%", height: "150px"}}/>
+                    <Image src={`${API}/blog/photo/${bangladesh[3]?.slug}`} width = '100' height = '55' layout="responsive"/>
                     <h4 className='p-2'>
                       <Link href={`/blogs/${bangladesh[5]?.slug}`}>
                         <a> 
@@ -451,7 +459,7 @@ const Blogs = ({ sports, technology, education, health, lifestyle, artlit, relig
 
               
                 <div className='col-md-4 mt-3'>
-                <div className={styles.fixedadds}>
+                <div className={styles.fixedadds} >
                   <div className='col-12'>
                   <HomeRightAds/>
                   </div>
@@ -481,7 +489,7 @@ const Blogs = ({ sports, technology, education, health, lifestyle, artlit, relig
                 <div className={styles.rajnitisec}>
                   <div className='col-md-12 mt-2 border'>
                     {/* <img src='img1.jpg' className='w-100'/> */}
-                    <img src={`${API}/blog/photo/${politics[0]?.slug}`} style={{width: "100%", height: "250px"}}/>
+                    <Image src={`${API}/blog/photo/${politics[0]?.slug}`} width = '100' height = '60' layout="responsive"/>
                     <div>
                       <h3 className='mt-3 p-2'>
                         <Link href={`/blogs/${politics[0]?.slug}`}>
@@ -499,7 +507,7 @@ const Blogs = ({ sports, technology, education, health, lifestyle, artlit, relig
                         <span className={styles.minithumb}></span>
                           <div className='col-4'>
                             {/* <img src='img1.jpg' className='w-100'/> */}
-                            <img src={`${API}/blog/photo/${politics[1]?.slug}`} style={{width: "100%", height: "80px"}}/>
+                            <img src={`${API}/blog/photo/${politics[1]?.slug}`} width = '100' height = '60' layout="responsive"/>
                           </div>
                           <div className='col-8'>
                             <p>
@@ -516,7 +524,7 @@ const Blogs = ({ sports, technology, education, health, lifestyle, artlit, relig
                         <span className={styles.minithumb}></span>
                           <div className='col-4'>
                             {/* <img src='img1.jpg' className='w-100'/> */}
-                            <img src={`${API}/blog/photo/${politics[2]?.slug}`} style={{width: "100%", height: "80px"}}/>
+                            <Image src={`${API}/blog/photo/${politics[2]?.slug}`} width = '100' height = '60' layout="responsive"/>
                           </div>
                         <div className='col-8'>
                           <p>
@@ -533,7 +541,7 @@ const Blogs = ({ sports, technology, education, health, lifestyle, artlit, relig
                         <span className={styles.minithumb}></span>
                           <div className='col-4'>
                             {/* <img src='img1.jpg' className='w-100'/> */}
-                            <img src={`${API}/blog/photo/${politics[3]?.slug}`} style={{width: "100%", height: "80px"}}/>
+                            <Image src={`${API}/blog/photo/${politics[3]?.slug}`} width = '100' height = '60' layout="responsive"/>
                           </div>
                         <div className='col-8'>
                           <p>
@@ -571,7 +579,7 @@ const Blogs = ({ sports, technology, education, health, lifestyle, artlit, relig
                 <div className={styles.rajnitisec}>
                   <div className='col-md-12 mt-2 border'>
                     {/* <img src='img1.jpg' className='w-100'/> */}
-                    <img src={`${API}/blog/photo/${economy[0]?.slug}`} style={{width: "100%", height: "250px"}}/>
+                    <Image src={`${API}/blog/photo/${economy[0]?.slug}`} width = '100' height = '60' layout="responsive"/>
                     <div>
                       <h3 className='mt-3 p-2'>
                         <Link href={`/blogs/${economy[0]?.slug}`}>
@@ -589,7 +597,7 @@ const Blogs = ({ sports, technology, education, health, lifestyle, artlit, relig
                         <span className={styles.minithumb}></span>
                           <div className='col-4'>
                             {/* <img src='img1.jpg' className='w-100'/> */}
-                            <img src={`${API}/blog/photo/${economy[1]?.slug}`} style={{width: "100%", height: "80px"}}/>
+                            <Image src={`${API}/blog/photo/${economy[1]?.slug}`} width = '100' height = '60' layout="responsive"/>
                           </div>
                           <div className='col-8'>
                             <p>
@@ -606,7 +614,7 @@ const Blogs = ({ sports, technology, education, health, lifestyle, artlit, relig
                         <span className={styles.minithumb}></span>
                           <div className='col-4'>
                             {/* <img src='img1.jpg' className='w-100'/> */}
-                            <img src={`${API}/blog/photo/${economy[2]?.slug}`} style={{width: "100%", height: "80px"}}/>
+                            <Image src={`${API}/blog/photo/${economy[2]?.slug}`} width = '100' height = '60' layout="responsive"/>
                           </div>
                         <div className='col-8'>
                           <p>
@@ -623,7 +631,7 @@ const Blogs = ({ sports, technology, education, health, lifestyle, artlit, relig
                         <span className={styles.minithumb}></span>
                           <div className='col-4'>
                             {/* <img src='img1.jpg' className='w-100'/> */}
-                            <img src={`${API}/blog/photo/${economy[3]?.slug}`} style={{width: "100%", height: "80px"}}/>
+                            <Image src={`${API}/blog/photo/${economy[3]?.slug}`} width = '100' height = '60' layout="responsive"/>
                           </div>
                         <div className='col-8'>
                           <p>
@@ -664,7 +672,7 @@ const Blogs = ({ sports, technology, education, health, lifestyle, artlit, relig
                 <div className={styles.rajnitisec}>
                   <div className='col-md-12 mt-2 border'>
                     {/* <img src='img1.jpg' className='w-100'/> */}
-                    <img src={`${API}/blog/photo/${worldnews[0]?.slug}`} style={{width: "100%", height: "250px"}}/>
+                    <Image src={`${API}/blog/photo/${worldnews[0]?.slug}`} width = '100' height = '60' layout="responsive"/>
                     <div>
                       <h3 className='mt-3 p-2'>
                         <Link href={`/blogs/${worldnews[0]?.slug}`}>
@@ -682,7 +690,7 @@ const Blogs = ({ sports, technology, education, health, lifestyle, artlit, relig
                         <span className={styles.minithumb}></span>
                           <div className='col-4'>
                             {/* <img src='img1.jpg' className='w-100'/> */}
-                            <img src={`${API}/blog/photo/${worldnews[1]?.slug}`} style={{width: "100%", height: "80px"}}/>
+                            <Image src={`${API}/blog/photo/${worldnews[1]?.slug}`} width = '100' height = '60' layout="responsive"/>
                           </div>
                           <div className='col-8'>
                             <p>
@@ -699,7 +707,7 @@ const Blogs = ({ sports, technology, education, health, lifestyle, artlit, relig
                         <span className={styles.minithumb}></span>
                           <div className='col-4'>
                             {/* <img src='img1.jpg' className='w-100'/> */}
-                            <img src={`${API}/blog/photo/${worldnews[2]?.slug}`} style={{width: "100%", height: "80px"}}/>
+                            <Image src={`${API}/blog/photo/${worldnews[2]?.slug}`} width = '100' height = '60' layout="responsive"/>
                           </div>
                         <div className='col-8'>
                           <p>
@@ -716,7 +724,7 @@ const Blogs = ({ sports, technology, education, health, lifestyle, artlit, relig
                         <span className={styles.minithumb}></span>
                           <div className='col-4'>
                             {/* <img src='img1.jpg' className='w-100'/> */}
-                            <img src={`${API}/blog/photo/${worldnews[3]?.slug}`} style={{width: "100%", height: "80px"}}/>
+                            <Image src={`${API}/blog/photo/${worldnews[3]?.slug}`} width = '100' height = '60' layout="responsive"/>
                           </div>
                         <div className='col-8'>
                           <p>
@@ -775,7 +783,7 @@ const Blogs = ({ sports, technology, education, health, lifestyle, artlit, relig
                 <div className={styles.rajnitisec}>
                   <div className='col-md-12 border'>
                     {/* <img src='img1.jpg' className='w-100'/> */}
-                    <img src={`${API}/blog/photo/${education[0]?.slug}`} style={{width: "100%", height: "180px"}}/>
+                    <Image src={`${API}/blog/photo/${education[0]?.slug}`} width = '100' height = '60' layout="responsive" style={{width: "100%", height: "180px"}}/>
                     <div>
                       <p className='fw-bold p-2 font-weight-bold'>
                         <Link href={`/blogs/${education[0]?.slug}`}>
@@ -859,7 +867,7 @@ const Blogs = ({ sports, technology, education, health, lifestyle, artlit, relig
                 <div className={styles.rajnitisec}>
                   <div className='col-md-12 border'>
                     {/* <img src='img1.jpg' className='w-100'/> */}
-                    <img src={`${API}/blog/photo/${health[0]?.slug}`} style={{width: "100%", height: "180px"}}/>
+                    <Image src={`${API}/blog/photo/${health[0]?.slug}`} width = '100' height = '60' layout="responsive" style={{width: "100%", height: "180px"}}/>
                     <div>
                       <p className='fw-bold p-2 font-weight-bold'>
                         <Link href={`/blogs/${health[0]?.slug}`}>
@@ -946,7 +954,7 @@ const Blogs = ({ sports, technology, education, health, lifestyle, artlit, relig
                 <div className={styles.rajnitisec}>
                   <div className='col-md-12 border'>
                     {/* <img src='img1.jpg' className='w-100'/> */}
-                    <img src={`${API}/blog/photo/${lifestyle[0]?.slug}`} style={{width: "100%", height: "180px"}}/>
+                    <Image src={`${API}/blog/photo/${lifestyle[0]?.slug}`} width = '100' height = '60' layout="responsive" style={{width: "100%", height: "180px"}}/>
                     <div>
                       <p className='fw-bold p-2 font-weight-bold'>
                         <Link href={`/blogs/${lifestyle[0]?.slug}`}>
@@ -1030,7 +1038,7 @@ const Blogs = ({ sports, technology, education, health, lifestyle, artlit, relig
                 <div className={styles.rajnitisec}>
                   <div className='col-md-12 border'>
                     {/* <img src='img1.jpg' className='w-100'/> */}
-                    <img src={`${API}/blog/photo/${artlit[0]?.slug}`} style={{width: "100%", height: "180px"}}/>
+                    <Image src={`${API}/blog/photo/${artlit[0]?.slug}`} width = '100' height = '60' layout="responsive" style={{width: "100%", height: "180px"}}/>
                     <div>
                       <p className='fw-bold p-2 font-weight-bold'>
                         <Link href={`/blogs/${artlit[0]?.slug}`}>
@@ -1113,7 +1121,7 @@ const Blogs = ({ sports, technology, education, health, lifestyle, artlit, relig
                 <div className={styles.rajnitisec}>
                   <div className='col-md-12 border'>
                     {/* <img src='img1.jpg' className='w-100'/> */}
-                    <img src={`${API}/blog/photo/${technology[0]?.slug}`} style={{width: "100%", height: "180px"}}/>
+                    <Image src={`${API}/blog/photo/${technology[0]?.slug}`} width = '100' height = '60' layout="responsive" style={{width: "100%", height: "180px"}}/>
                     <div>
                       <p className='fw-bold p-2 font-weight-bold'>
                         <Link href={`/blogs/${technology[0]?.slug}`}>
@@ -1197,7 +1205,7 @@ const Blogs = ({ sports, technology, education, health, lifestyle, artlit, relig
                 <div className={styles.rajnitisec}>
                   <div className='col-md-12 border'>
                     {/* <img src='img1.jpg' className='w-100'/> */}
-                    <img src={`${API}/blog/photo/${religion[0]?.slug}`} style={{width: "100%", height: "180px"}}/>
+                    <Image src={`${API}/blog/photo/${religion[0]?.slug}`} width = '100' height = '60' layout="responsive" style={{width: "100%", height: "180px"}}/>
                     <div>
                       <p className='fw-bold p-2 font-weight-bold'>
                         <Link href={`/blogs/${religion[0]?.slug}`}>
@@ -1281,7 +1289,7 @@ const Blogs = ({ sports, technology, education, health, lifestyle, artlit, relig
                 <div className={styles.rajnitisec}>
                   <div className='col-md-12 border'>
                     {/* <img src='img1.jpg' className='w-100'/> */}
-                    <img src={`${API}/blog/photo/${travel[0]?.slug}`} style={{width: "100%", height: "180px"}}/>
+                    <Image src={`${API}/blog/photo/${travel[0]?.slug}`} width = '100' height = '60' layout="responsive"/>
                     <div>
                       <p className='fw-bold p-2 font-weight-bold'>
                         <Link href={`/blogs/${travel[0]?.slug}`}>
@@ -1365,7 +1373,7 @@ const Blogs = ({ sports, technology, education, health, lifestyle, artlit, relig
                 <div className={styles.rajnitisec}>
                   <div className='col-md-12 border'>
                     {/* <img src='img1.jpg' className='w-100'/> */}
-                    <img src={`${API}/blog/photo/${reciepe[0]?.slug}`} style={{width: "100%", height: "180px"}}/>
+                    <Image src={`${API}/blog/photo/${reciepe[0]?.slug}`} width = '100' height = '60' layout="responsive"/>
                     <div>
                       <p className='fw-bold p-2 font-weight-bold'>
                       <Link href={`/blogs/${reciepe[0]?.slug}`}>

@@ -40,7 +40,8 @@
     "react-scripts": "^5.0.0",
     "reactstrap": "^9.0.1",
     "styled-components": "^5.3.3",
-    "styled-components.macro": "^1.0.0"
+    "styled-components.macro": "^1.0.0",
+    "tinymce": "^6.0.2"
   },
   "devDependencies": {
     "@swc/cli": "^0.1.55",
